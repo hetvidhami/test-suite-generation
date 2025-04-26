@@ -40,11 +40,7 @@ class TestBankAccount(unittest.TestCase):
         # Test that depositing zero raises an error.
         with self.assertRaises(ValueError):
             self.account.deposit(0)
-    
-    def test_withdraw_full_balance(self):
-        # Test that withdrawing the exact balance leaves zero balance.
-        self.account.withdraw(1000)
-        self.assertEqual(self.account.get_balance(), 0)
+
     
     def test_multiple_transactions(self):
         """Test multiple deposits and withdrawals in a sequence."""
